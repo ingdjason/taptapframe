@@ -1,0 +1,340 @@
+/*
+*
+* RD Navbar
+*/
+@keyframes rd-navbar-slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rd-navbar-slide-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.rd-navbar-wrap,
+.rd-navbar,
+.rd-menu,
+.rd-navbar-nav,
+.rd-navbar-panel,
+.rd-navbar-static .rd-menu,
+.rd-navbar-fixed .rd-navbar-main,
+.rd-navbar-fixed .rd-navbar-submenu {
+  transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.rd-navbar--no-transition,
+.rd-navbar--no-transition * {
+  transition: none !important;
+}
+
+.rd-navbar.rd-navbar-fixed + .rd-navbar.rd-navbar--is-clone,
+.rd-navbar.rd-navbar-sidebar + .rd-navbar.rd-navbar--is-clone {
+  display: none;
+}
+
+.rd-navbar {
+  position: relative;
+  z-index: 1090;
+  background: #fff;
+}
+
+.rd-navbar-toggle {
+  display: inline-block;
+  position: relative;
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  cursor: pointer;
+  color: #b7b7b7;
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
+.rd-navbar-toggle span {
+  position: relative;
+  display: block;
+  margin: auto;
+  transition: 0.3s all ease;
+}
+
+.rd-navbar-toggle span::before,
+.rd-navbar-toggle span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  transition: 0.3s all ease;
+}
+
+.rd-navbar-toggle span::after {
+  top: 10px;
+}
+
+.rd-navbar-toggle span,
+.rd-navbar-toggle span::before,
+.rd-navbar-toggle span::after {
+  width: 30px;
+  height: 4px;
+  background-color: #b7b7b7;
+  backface-visibility: hidden;
+  border-radius: 3px;
+}
+
+.rd-navbar-toggle.active span {
+  background: transparent;
+}
+
+.rd-navbar-toggle.active span::before,
+.rd-navbar-toggle.active span::after {
+  transform-origin: 50% 50%;
+  top: 0;
+}
+
+.rd-navbar-toggle.active span::before {
+  transform: rotate(45deg);
+}
+
+.rd-navbar-toggle.active span::after {
+  transform: rotate(-45deg);
+}
+
+.rd-navbar-collapse-toggle {
+  display: inline-block;
+  position: relative;
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  cursor: pointer;
+  color: #b7b7b7;
+  display: none;
+}
+
+.rd-navbar-collapse-toggle span {
+  top: 50%;
+  margin-top: -2.875px;
+}
+
+.rd-navbar-collapse-toggle span,
+.rd-navbar-collapse-toggle span::before,
+.rd-navbar-collapse-toggle span::after {
+  position: absolute;
+  width: 5.75px;
+  height: 5.75px;
+  line-height: 5.75px;
+  text-align: center;
+  background: #b7b7b7;
+  left: 50%;
+  margin-left: -2.875px;
+  border-radius: 50%;
+  transition: 0.3s all ease;
+}
+
+.rd-navbar-collapse-toggle span::before,
+.rd-navbar-collapse-toggle span::after {
+  content: "";
+}
+
+.rd-navbar-collapse-toggle span::before {
+  bottom: 100%;
+  margin-bottom: 2.875px;
+}
+
+.rd-navbar-collapse-toggle span::after {
+  top: 100%;
+  margin-top: 2.875px;
+}
+
+.rd-navbar-collapse-toggle.active span {
+  transform: scale(0.7);
+}
+
+.rd-navbar-collapse-toggle.active span::before {
+  transform: translateY(17.25px);
+}
+
+.rd-navbar-collapse-toggle.active span::after {
+  transform: translateY(-17.25px);
+}
+
+.rd-navbar-brand a {
+  display: block;
+}
+
+.rd-navbar-search {
+  position: absolute;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 266px;
+  height: 50px;
+}
+
+.rd-navbar-search .form-input {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  min-height: 50px;
+  padding-right: 50px;
+}
+
+.rd-navbar-search .form-label {
+  top: 25px;
+}
+
+.rd-navbar-search .rd-search-form-submit {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(13, 73, 141);
+  font-size: 15px;
+  color: #ccc;
+  transition: 0.33s;
+}
+
+.rd-navbar-search .rd-search-form-submit:hover {
+	background-color: #fff;
+	color: rgb(13, 73, 141);
+	border: 2px rgb(13, 73, 141) solid;
+}
+
+.rd-navbar-search-toggle {
+  background: none;
+  border: none;
+  display: inline-block;
+  padding: 0;
+  outline: none;
+  outline-offset: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.rd-navbar-search-toggle::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+
+.rd-navbar-search-toggle span {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 50px;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.rd-navbar-search-toggle span::before,
+.rd-navbar-search-toggle span::after {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.rd-navbar-search-toggle span::before,
+.rd-navbar-search-toggle span::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.rd-navbar-search-toggle span::before {
+  content: "î€œ";
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+  visibility: visible;
+  font-family: "fl-budicons-launch";
+}
+
+.rd-navbar-search-toggle span::after {
+  content: "ï‰Œ";
+  transform: rotate(-90deg) scale(0.4);
+  opacity: 0;
+  visibility: hidden;
+  font-family: "Material Design Icons";
+}
+
+.rd-navbar-search-toggle.active span::before {
+  opacity: 0;
+  visibility: hidden;
+  transform: rotate(90deg) scale(0.4);
+}
+
+.rd-navbar-search-toggle.active span::after {
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.rd-nav-link {
+  font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+	color: #fff;
+  line-height: 1.2;
+}
+
+.rd-dropdown-link,
+.rd-megamenu-list-link {
+  font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.rd-navbar-dropdown {
+  display: none;
+}
+
+.rd-navbar-dark {
+	background: rgb(13, 73, 141); /* 35363c #0d498d; */
+	height: 255px;
+	/* border: 50px rgb(13, 73, 141) solid; */
+}
+
+.rd-navbar-darker {
+  background: #2c2d31;
+  background-color: rgb(13, 73, 141);
+  margin-top: 80px;
+  width: 100%;
+  align-content: center;
+}
+
+/** align item nav center **/
+.nav-main{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+	justify-content: center;
+}

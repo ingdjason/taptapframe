@@ -1,0 +1,300 @@
+
+
+/**
+*
+* RD Navbar Classic
+*/
+.rd-navbar-classic {
+	background: #fff;
+	margin: 0;
+}
+
+.rd-navbar-classic .rd-navbar-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.rd-navbar-classic .rd-navbar-list-item {
+	display: flex;
+	align-items: center;
+}
+
+.rd-navbar-classic .rd-navbar-list-link {
+	display: block;
+	max-width: 80px;
+	opacity: .15;
+}
+
+.rd-navbar-classic .rd-navbar-list-link:hover {
+	opacity: .8;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-panel {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-panel-inner,
+.rd-navbar-classic.rd-navbar-static .rd-navbar-main-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-panel-inner {
+	position: relative;
+	z-index: 2;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-panel-item {
+	display: flex;
+	align-items: center;
+	width: 40%;
+	padding: 15px 0;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-panel-item-left,
+.rd-navbar-classic.rd-navbar-static .rd-navbar-panel-item-right {
+	position: relative;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-panel-item-left > *,
+.rd-navbar-classic.rd-navbar-static .rd-navbar-panel-item-right > * {
+	position: relative;
+	z-index: 1;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-panel-item-left::before,
+.rd-navbar-classic.rd-navbar-static .rd-navbar-panel-item-right::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: 0;
+	width: 100vw;
+	background: #2c2d31;
+	transform-origin: 0 0;
+	pointer-events: none;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-panel-item-left {
+	display: block;
+	flex-direction: column;
+	padding-right: 20px;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-panel-item-left::before {
+	right: 0;
+	transform: skew(-30deg);
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-panel-item-right {
+	justify-content: flex-end;
+	padding-left: 20px;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-panel-item-right::before {
+	left: 0;
+	transform: skew(30deg);
+}
+
+.rd-navbar-classic.rd-navbar-static .owl-carousel-inline-outer {
+	overflow: hidden;
+	width: 100%;
+	max-width: 90%;
+	flex-shrink: 0;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-brand {
+	position: relative;
+	top: -8px;
+	margin-top: -43px;
+	text-align: center;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-brand img {
+	width: auto;
+	height: auto;
+	max-width: 200px;
+	max-height: 200px;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-main-top {
+	padding: 10px 0;
+	background-color: rgb(253, 253, 253);
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-list {
+	order: 0;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-brand {
+	order: 1;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-search {
+	order: 2;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-list,
+.rd-navbar-classic.rd-navbar-static .rd-navbar-search {
+	width: calc(50% - 200px / 2);
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-main-bottom {
+	padding: 20px 0;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-main-container {
+	position: relative;
+	align-items: center;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-list-item + .rd-navbar-list-item {
+	margin-left: 44px;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-search {
+	max-width: 315px;
+	margin-left: auto;
+	width: 100%;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-nav-item > .rd-navbar-submenu-toggle {
+	position: relative;
+	top: 1px;
+}
+
+.rd-navbar-classic.rd-navbar-static .rd-navbar-megamenu {
+	left: 15px;
+	right: auto;
+}
+
+.rd-navbar-classic.rd-navbar-static .post-classic-title {
+	color: #151515;
+}
+
+@media (min-width: 1200px) {
+	.rd-navbar-classic.rd-navbar-static .rd-navbar-main-top {
+		padding: 20px 0;
+	}
+	.rd-navbar-classic.rd-navbar-static .rd-navbar-list-item + .rd-navbar-list-item {
+		margin-left: 65px;
+	}
+}
+
+.rd-navbar-classic.rd-navbar-static.rd-navbar--is-stuck, .rd-navbar-classic.rd-navbar-static.rd-navbar--is-clone {
+	background: #35363c;
+}
+
+.rd-navbar-classic.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-panel,
+.rd-navbar-classic.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-main-top, .rd-navbar-classic.rd-navbar-static.rd-navbar--is-clone .rd-navbar-panel,
+.rd-navbar-classic.rd-navbar-static.rd-navbar--is-clone .rd-navbar-main-top {
+	height: 0;
+	overflow: hidden;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.rd-navbar-classic.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-nav-item > .rd-navbar-submenu, .rd-navbar-classic.rd-navbar-static.rd-navbar--is-clone .rd-navbar-nav-item > .rd-navbar-submenu {
+	margin-top: 17px;
+}
+
+.rd-navbar-classic.rd-navbar-fixed .rd-navbar-list {
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.rd-navbar-classic.rd-navbar-fixed .rd-navbar-list-item {
+	padding: 0 12px;
+	flex-grow: 1;
+}
+
+.rd-navbar-classic.rd-navbar-fixed .rd-navbar-panel-inner {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-left: 15px;
+	padding-right: 5px;
+}
+
+.rd-navbar-classic.rd-navbar-fixed .rd-navbar-panel-inner > * + * {
+	margin-left: 14px;
+}
+
+.rd-navbar-classic.rd-navbar-fixed .rd-navbar-main-top {
+	padding: 20px 10px 15px;
+}
+
+.rd-navbar-classic.rd-navbar-fixed .rd-navbar-main-bottom {
+	background-color: transparent;
+}
+
+.rd-navbar-classic.rd-navbar-fixed .rd-navbar-main-element {
+	margin: 10px 20px;
+}
+
+.context-dark .rd-navbar-static.rd-navbar-classic .rd-nav-link, .rd-navbar-dark .rd-navbar-static.rd-navbar-classic .rd-nav-link, .rd-navbar-darker .rd-navbar-static.rd-navbar-classic .rd-nav-link, .bg-gray-700 .rd-navbar-static.rd-navbar-classic .rd-nav-link, .bg-gray-2 .rd-navbar-static.rd-navbar-classic .rd-nav-link, .bg-gray-4 .rd-navbar-static.rd-navbar-classic .rd-nav-link, .bg-primary .rd-navbar-static.rd-navbar-classic .rd-nav-link, .bg-image-dark .rd-navbar-static.rd-navbar-classic .rd-nav-link {
+	color: #fff;
+}
+
+.context-dark .rd-navbar-static.rd-navbar-classic .rd-nav-item.active .rd-nav-link, .rd-navbar-dark .rd-navbar-static.rd-navbar-classic .rd-nav-item.active .rd-nav-link, .rd-navbar-darker .rd-navbar-static.rd-navbar-classic .rd-nav-item.active .rd-nav-link, .bg-gray-700 .rd-navbar-static.rd-navbar-classic .rd-nav-item.active .rd-nav-link, .bg-gray-2 .rd-navbar-static.rd-navbar-classic .rd-nav-item.active .rd-nav-link, .bg-gray-4 .rd-navbar-static.rd-navbar-classic .rd-nav-item.active .rd-nav-link, .bg-primary .rd-navbar-static.rd-navbar-classic .rd-nav-item.active .rd-nav-link, .bg-image-dark .rd-navbar-static.rd-navbar-classic .rd-nav-item.active .rd-nav-link,
+.context-dark .rd-navbar-static.rd-navbar-classic .rd-nav-item.opened .rd-nav-link,
+.rd-navbar-dark .rd-navbar-static.rd-navbar-classic .rd-nav-item.opened .rd-nav-link,
+.rd-navbar-darker .rd-navbar-static.rd-navbar-classic .rd-nav-item.opened .rd-nav-link,
+.bg-gray-700 .rd-navbar-static.rd-navbar-classic .rd-nav-item.opened .rd-nav-link,
+.bg-gray-2 .rd-navbar-static.rd-navbar-classic .rd-nav-item.opened .rd-nav-link,
+.bg-gray-4 .rd-navbar-static.rd-navbar-classic .rd-nav-item.opened .rd-nav-link,
+.bg-primary .rd-navbar-static.rd-navbar-classic .rd-nav-item.opened .rd-nav-link,
+.bg-image-dark .rd-navbar-static.rd-navbar-classic .rd-nav-item.opened .rd-nav-link,
+.context-dark .rd-navbar-static.rd-navbar-classic .rd-nav-item.focus .rd-nav-link,
+.rd-navbar-dark .rd-navbar-static.rd-navbar-classic .rd-nav-item.focus .rd-nav-link,
+.rd-navbar-darker .rd-navbar-static.rd-navbar-classic .rd-nav-item.focus .rd-nav-link,
+.bg-gray-700 .rd-navbar-static.rd-navbar-classic .rd-nav-item.focus .rd-nav-link,
+.bg-gray-2 .rd-navbar-static.rd-navbar-classic .rd-nav-item.focus .rd-nav-link,
+.bg-gray-4 .rd-navbar-static.rd-navbar-classic .rd-nav-item.focus .rd-nav-link,
+.bg-primary .rd-navbar-static.rd-navbar-classic .rd-nav-item.focus .rd-nav-link,
+.bg-image-dark .rd-navbar-static.rd-navbar-classic .rd-nav-item.focus .rd-nav-link {
+	color: #35ad79;
+}
+
+.context-dark .rd-navbar-classic .rd-navbar-search .form-label, .rd-navbar-dark .rd-navbar-classic .rd-navbar-search .form-label, .rd-navbar-darker .rd-navbar-classic .rd-navbar-search .form-label, .bg-gray-700 .rd-navbar-classic .rd-navbar-search .form-label, .bg-gray-2 .rd-navbar-classic .rd-navbar-search .form-label, .bg-gray-4 .rd-navbar-classic .rd-navbar-search .form-label, .bg-primary .rd-navbar-classic .rd-navbar-search .form-label, .bg-image-dark .rd-navbar-classic .rd-navbar-search .form-label,
+.context-dark .rd-navbar-classic .rd-navbar-search .form-input,
+.rd-navbar-dark .rd-navbar-classic .rd-navbar-search .form-input,
+.rd-navbar-darker .rd-navbar-classic .rd-navbar-search .form-input,
+.bg-gray-700 .rd-navbar-classic .rd-navbar-search .form-input,
+.bg-gray-2 .rd-navbar-classic .rd-navbar-search .form-input,
+.bg-gray-4 .rd-navbar-classic .rd-navbar-search .form-input,
+.bg-primary .rd-navbar-classic .rd-navbar-search .form-input,
+.bg-image-dark .rd-navbar-classic .rd-navbar-search .form-input {
+	color: #707279;
+}
+
+.context-dark .rd-navbar-classic .rd-navbar-search input, .rd-navbar-dark .rd-navbar-classic .rd-navbar-search input, .rd-navbar-darker .rd-navbar-classic .rd-navbar-search input, .bg-gray-700 .rd-navbar-classic .rd-navbar-search input, .bg-gray-2 .rd-navbar-classic .rd-navbar-search input, .bg-gray-4 .rd-navbar-classic .rd-navbar-search input, .bg-primary .rd-navbar-classic .rd-navbar-search input, .bg-image-dark .rd-navbar-classic .rd-navbar-search input {
+	background: #ddd;
+	border-color: rgb(13, 73, 141);;
+}
+
+
+.context-dark .rd-navbar-classic .nav-light-list a, .rd-navbar-dark .rd-navbar-classic .nav-light-list a, .rd-navbar-darker .rd-navbar-classic .nav-light-list a, .bg-gray-700 .rd-navbar-classic .nav-light-list a, .bg-gray-2 .rd-navbar-classic .nav-light-list a, .bg-gray-4 .rd-navbar-classic .nav-light-list a, .bg-primary .rd-navbar-classic .nav-light-list a, .bg-image-dark .rd-navbar-classic .nav-light-list a {
+	color: #707279;
+}
+
+.context-dark .rd-navbar-classic .nav-light-list li.active, .rd-navbar-dark .rd-navbar-classic .nav-light-list li.active, .rd-navbar-darker .rd-navbar-classic .nav-light-list li.active, .bg-gray-700 .rd-navbar-classic .nav-light-list li.active, .bg-gray-2 .rd-navbar-classic .nav-light-list li.active, .bg-gray-4 .rd-navbar-classic .nav-light-list li.active, .bg-primary .rd-navbar-classic .nav-light-list li.active, .bg-image-dark .rd-navbar-classic .nav-light-list li.active,
+.context-dark .rd-navbar-classic .nav-light-list a:hover,
+.rd-navbar-dark .rd-navbar-classic .nav-light-list a:hover,
+.rd-navbar-darker .rd-navbar-classic .nav-light-list a:hover,
+.bg-gray-700 .rd-navbar-classic .nav-light-list a:hover,
+.bg-gray-2 .rd-navbar-classic .nav-light-list a:hover,
+.bg-gray-4 .rd-navbar-classic .nav-light-list a:hover,
+.bg-primary .rd-navbar-classic .nav-light-list a:hover,
+.bg-image-dark .rd-navbar-classic .nav-light-list a:hover {
+	color: #fcef57;
+}
+
+.context-dark .rd-navbar-classic .link, .rd-navbar-dark .rd-navbar-classic .link, .rd-navbar-darker .rd-navbar-classic .link, .bg-gray-700 .rd-navbar-classic .link, .bg-gray-2 .rd-navbar-classic .link, .bg-gray-4 .rd-navbar-classic .link, .bg-primary .rd-navbar-classic .link, .bg-image-dark .rd-navbar-classic .link {
+	color: #fff;
+}
+
+.context-dark .rd-navbar-classic .link:hover, .rd-navbar-dark .rd-navbar-classic .link:hover, .rd-navbar-darker .rd-navbar-classic .link:hover, .bg-gray-700 .rd-navbar-classic .link:hover, .bg-gray-2 .rd-navbar-classic .link:hover, .bg-gray-4 .rd-navbar-classic .link:hover, .bg-primary .rd-navbar-classic .link:hover, .bg-image-dark .rd-navbar-classic .link:hover {
+	color: #35ad79;
+}

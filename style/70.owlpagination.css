@@ -1,0 +1,220 @@
+/*
+ * Owl Pagination
+ */
+ .owl-dots {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.owl-dot {
+	position: relative;
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	margin-left: 6px;
+	margin-right: 6px;
+	border-radius: 50%;
+	text-align: center;
+	outline: none;
+	cursor: pointer;
+	background-color: #afafaf;
+	transition: .3s ease-out all;
+}
+
+.owl-dot:hover, .owl-dot:focus, .owl-dot.active {
+	background-color: #35ac78;
+	transform: scale(1.5);
+}
+
+.owl-carousel[data-nav-custom] .owl-prev,
+.owl-carousel[data-nav-custom] .owl-next {
+	display: none;
+}
+
+.owl-carousel-inline-outer {
+	position: relative;
+	padding-left: 60px;
+	min-height: 23px;
+}
+
+.owl-carousel-inline-outer .owl-inline-nav {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	font-size: 16px;
+	line-height: 1.3;
+}
+
+.owl-carousel-inline-outer .owl-carousel {
+	max-width: calc(100% + 60px);
+}
+
+.owl-carousel-inline-outer .owl-arrow {
+	background: none;
+	border: none;
+	display: inline-block;
+	padding: 0;
+	outline: none;
+	outline-offset: 0;
+	cursor: pointer;
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	line-height: 20px;
+	border-radius: 3px;
+	color: #fff;
+	background: #35ad79;
+	transition: .2s;
+}
+
+.owl-carousel-inline-outer .owl-arrow::-moz-focus-inner {
+	border: none;
+	padding: 0;
+}
+
+.owl-carousel-inline-outer .owl-arrow::before {
+	font-family: 'Material Icons';
+}
+
+.owl-carousel-inline-outer .owl-arrow:hover {
+	color: #151515;
+	background: #fcef57;
+}
+
+.owl-carousel-inline-outer .owl-arrow-prev::before {
+	content: '\e5cb';
+}
+
+.owl-carousel-inline-outer .owl-arrow-next::before {
+	content: '\e5cc';
+}
+
+.owl-carousel-inline-outer .owl-carousel {
+	top: 5px;
+}
+
+.owl-carousel-inline-outer * + .owl-arrow {
+	margin-left: 5px;
+}
+
+.owl-carousel-inline-outer-1 {
+	position: relative;
+	min-height: 23px;
+	max-width: 100%;
+	width: 100%;
+}
+
+.owl-carousel-inline-outer-1 .owl-carousel-inline-wrap {
+	flex-grow: 1;
+	width: 100%;
+	max-width: 100%;
+}
+
+.owl-carousel-inline-outer-1 .owl-inline-nav {
+	flex-shrink: 0;
+}
+
+.owl-carousel-inline-outer-1 .owl-inline-nav > * {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	line-height: 1.3;
+}
+
+.owl-carousel-inline-outer-1 .owl-carousel {
+	top: 7px;
+	max-width: calc(100% + 60px);
+}
+
+.owl-carousel-inline-outer-1 .owl-arrow {
+	background: none;
+	border: none;
+	display: inline-block;
+	padding: 0;
+	outline: none;
+	outline-offset: 0;
+	cursor: pointer;
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	line-height: 20px;
+	border-radius: 3px;
+	color: #151515;
+	background: #fcef57;
+	transition: .2s;
+}
+
+.owl-carousel-inline-outer-1 .owl-arrow::-moz-focus-inner {
+	border: none;
+	padding: 0;
+}
+
+.owl-carousel-inline-outer-1 .owl-arrow::before {
+	font-family: 'Material Icons';
+}
+
+.owl-carousel-inline-outer-1 .owl-arrow:hover {
+	color: #fff;
+	background: #35ad79;
+}
+
+.owl-carousel-inline-outer-1 .owl-arrow-prev::before {
+	content: '\e5cb';
+}
+
+.owl-carousel-inline-outer-1 .owl-arrow-next::before {
+	content: '\e5cc';
+}
+
+.owl-carousel-inline-outer-1 * + .owl-arrow {
+	margin-left: 5px;
+}
+
+.owl-carousel-inline-outer-1 .owl-carousel {
+	margin-left: 10px;
+	line-height: 1.3;
+}
+
+.owl-carousel-arrows-outline .owl-arrow {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 26px;
+	height: 26px;
+	padding: 1px;
+	font: 400 20px/21px 'FontAwesome';
+	color: #111;
+	background: transparent;
+	border: 1px solid #c6c6c6;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .33s;
+}
+
+.owl-carousel-arrows-outline .owl-arrow:hover {
+	color: #fff;
+	background: #35ad79;
+	border-color: #35ad79;
+}
+
+.owl-carousel-arrows-outline .owl-arrow-prev::before {
+	margin-left: -1px;
+	content: '\f104';
+}
+
+.owl-carousel-arrows-outline .owl-arrow-next::before {
+	margin-right: -1px;
+	content: '\f105';
+}
+
+.owl-carousel-arrows-outline .button {
+	top: 1px;
+}
+
+html.firefox .owl-carousel-arrows-outline .owl-arrow::before {
+	position: relative;
+	top: -1px;
+}
+
